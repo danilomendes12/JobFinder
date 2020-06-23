@@ -22,6 +22,11 @@ public class User {
     @ManyToMany
     private Set<Role> roles;
 
+    public User (String username, String password){
+        this.setPassword(password);
+        this.setUsername(username);
+    }
+
     public Long getId() {
         return id;
     }
